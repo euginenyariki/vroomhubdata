@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="button" value="Login" onclick="authenticate()">
+    </form>
+
+    <p id="login-message"></p>
+
+    <script>
+        function authenticate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace this with your actual authentication logic.
+            if (username === "user" && password === "password") {
+                document.getElementById("login-message").innerHTML = "Login successful!";
+            } else {
+                document.getElementById("login-message").innerHTML = "Login failed. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
